@@ -70,10 +70,10 @@ def gen(camera):
 def video_feed1():
     return Response(gen(VideoCamera1()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')   
-@app.route('/video_feed2')  # 这个地址返回视频流响应
-def video_feed2():
-        return Response(gen(VideoCamera2()),
-                        mimetype='multipart/x-mixed-replace; boundary=frame')  
+# @app.route('/video_feed2')  # 这个地址返回视频流响应
+# def video_feed2():
+#         return Response(gen(VideoCamera2()),
+#                         mimetype='multipart/x-mixed-replace; boundary=frame')  
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000) 
 
@@ -81,3 +81,4 @@ if __name__ == '__main__':
     # server = pywsgi.WSGIServer(('0.0.0.0', 5000),app)
     # server.serve_forever() 
 
+# 
